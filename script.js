@@ -75,10 +75,16 @@ let weatherForecast = [
    ]
 
 //    Log today's weather conditions to the console.
-console.log(weatherForecast.day.conditions)
+console.log(weatherForecast[0].conditions) //should log sunny
 // Log Saturday's high temperature to the console.
+console.log(weatherForecast[1].temperature.high) //should log 50
 // Log Saturday's sunrise time to the console.
+console.log(weatherForecast[1].astronomy.sunrise) //should log 7:44am
 // Log Sunday's conditions to the console.
+console.log(weatherForecast[2].conditions) //should log chance of rain
 // Log Sunday's sunset time to the console.
+console.log(weatherForecast[2].astronomy.sunset) //should log 5:07 pm
 // Use string template literals to build few sentences about the weather forecast for Sunday. (Example: "The high on Sunday will be 47 and the low will be 35. We're predicting a chance of rain. The sun will rise at 7:45 AM and set at 5:07 PM.")
+
+console.log(`Sunday's weather will be partly cloudy with a ${weatherForecast[2].conditions}. The sun will rise at ${weatherForecast[2].astronomy.sunrise} and set at ${weatherForecast[2].astronomy.sunset}.`)
 
